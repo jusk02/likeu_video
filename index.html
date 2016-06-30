@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Prueba LikeU</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="author" type="text/html" href="https://plus.google.com/+MuazKhan">
+    <meta name="author" content="Muaz Khan">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+   
+     <link rel="stylesheet" href="css.css">
+
+    <script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
+    <script src="https://cdn.webrtc-experiment.com/gif-recorder.js"></script>
+    <script src="https://cdn.webrtc-experiment.com/getScreenId.js"></script>
+
+    <!-- for Edige/FF/Chrome/Opera/etc. getUserMedia support -->
+    <script src="https://cdn.webrtc-experiment.com/gumadapter.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+</head>
+
+<body>
+ 
+
+       
+
+
+        
+
+
+<div class="loader">
+    <h1>Espera un momento por favor, setamos guardando tu video para que puedas continuar con la prueba</h1>
+</div>
+
+<div id="msform">
+    <!-- fieldsets -->
+    <fieldset>
+        <div class="borrador"></div>
+        <div class="experiment recordrtc md-2">
+            <div class="mensaje">a continuacion cuando le des clic al boton</div>
+            <h2 class="header">
+                <select class="recording-media">
+                    <option value="record-video">Video</option>
+                    <option value="record-audio">Audio</option>
+                    <option value="record-screen">Screen</option>
+                </select>    
+                <button id="startRecordingPues" class="stopRecordingPues">Start Recording</button>
+            </h2>
+            <div style="text-align: center; display: none;">
+                <button style="text-align: center; display: none;" id="save-to-disk">Save To Disk</button>
+                <button style="text-align: center; display: none;" id="open-new-tab">Open New Tab</button>
+                <button class="uploadPues" id="upload-to-server">Upload To Server</button>
+            </div>
+            <video id="vid1" controls muted></video>
+            <div class="texto">leelo a tu ritmo, no tienes  que apurarte y si te equivocas fresco solo sigue leyendo y ya esta </div>
+        </div>
+        <div class="md-2">
+            <div>icono</div>
+            <h3>Titulo</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique feugiat sapien, ac mattis justo facilisis vel. Suspendisse pellentesque sollicitudin metus, at rhoncus justo finibus in. Donec sit amet blandit dui. Integer nec lectus purus. Aenean vestibulum gravida nunc, a ullamcorper ipsum bibendum aliquam. Sed faucibus, nibh at dictum malesuada, arcu quam condimentum lectus, bibendum commodo nisl nisl id mi.</p>
+            <video width="400" autoplay="autoplay" muted loop >
+              <source src="#/#.mp4" type="video/mp4">
+            
+            </video>
+            <input type="button" name="comenzar" class="comenzar action-button" value="Comenzar" />
+            
+        </div>
+        <input type="button" name="next" class="next action-button none" value="sig" />
+
+    </fieldset>
+
+    <fieldset>
+        <div class="mensaje">responda las siguentes preguntas en cuanto al texto anterior</div>
+         <div class="md-2">
+            <video width="400" autoplay="autoplay" muted loop >
+              <source src="#.mp4" type="video/mp4">
+            
+            </video>
+             <video width="400" autoplay="autoplay" muted loop >
+              <source src="#/#.mp4" type="video/mp4">
+            
+            </video>
+            
+        </div>
+        <div class="md-2">
+           
+            <label>pregunta uno </label>
+            <input type="text" id="p1" name="p1">
+            <label>pregunta dos </label>
+            <input type="text" id="p2" name="p2">
+            <label>pregunta tres </label>
+            <input type="text" id="p3" name="p3">
+           
+        </div>
+
+        <input type="button" name="next" class="next next-t action-button " value="Next" />
+
+    </fieldset>
+
+    <fieldset>
+        <div class="mensaje">a continuacion veras un texto corto que queremos que leas en vos alta</div>
+             <div class="md-2 video2">
+                
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique feugiat sapien, ac mattis justo facilisis vel. Suspendisse pellentesque sollicitudin metus, at rhoncus justo finibus in. Donec sit amet blandit dui. Integer nec lectus purus. Aenean vestibulum gravida nunc, a ullamcorper ipsum bibendum aliquam. Sed faucibus, nibh at dictum malesuada, arcu quam condimentum lectus, bibendum commodo nisl nisl id mi.</p>
+
+                 <video id="vid2" controls muted></video>
+            </div>
+            <div class="md-2">
+                <video width="400" autoplay="autoplay" muted loop >
+                  <source src="#.mp4" type="video/mp4">
+                
+                </video>
+                <p>recuerda que es una entrevista</p>
+            
+                 <input type="button" name="comenzar" class="comenzar2 action-button" value="Comensar2" />
+            </div>
+        
+         
+        <input type="button" name="next" class="next next2 action-button none" value="Next" />
+    </fieldset>
+
+        <fieldset>
+        <div class="mensaje">a continuacion veras un texto corto que queremos que leas en vos alta</div>
+             <div class="md-2 video2">
+                
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique feugiat sapien, ac mattis justo facilisis vel. Suspendisse pellentesque sollicitudin metus, at rhoncus justo finibus in. Donec sit amet blandit dui. Integer nec lectus purus. Aenean vestibulum gravida nunc, a ullamcorper ipsum bibendum aliquam. Sed faucibus, nibh at dictum malesuada, arcu quam condimentum lectus, bibendum commodo nisl nisl id mi.</p>
+                 <video id="vid3" controls muted></video>
+            </div>
+            <div class="md-2">
+                <video width="400" autoplay="autoplay" muted loop >
+                  <source src="#.mp4" type="video/mp4">
+                
+                </video>
+                <p>recuerda que es una entrevista</p>
+            
+                 <input type="button" name="comenzar" class="comenzar3 action-button" value="Comensar3" />
+            </div>
+        
+         
+        <input type="button" name="next" class="next next3 action-button none" value="Next" />
+    </fieldset>
+
+
+     <fieldset>
+        
+             <div class="md-1">
+                <video width="400" autoplay="autoplay" muted loop >
+                  <source src="#.mp4" type="video/mp4">
+                
+                </video>
+                
+            </div> 
+
+            <form id="formularioenvio" action="http://likeu3.herokuapp.com/users/1/edit" method="get">
+              <input class="non" type="text" id="text1" name="param"><br>
+              <input class="non" type="text" id="text2" name="param"><br>
+              <input class="non" type="text" id="text3" name="param"><br>
+              <input class="non" type="text" id="direccion1" name="param"><br>
+              <input class="non" type="text" id="direccion2" name="param"><br>
+              <input class="non" type="text" id="direccion3" name="param"><br>
+              <input type="submit"  class="submit action-button" value="Finalizar" />
+            </form>
+
+    </fieldset>
+
+</div>
+
+
+
+
+
+
+        <script>
+            (function() {
+                var params = {},
+                    r = /([^&=]+)=?([^&]*)/g;
+
+                function d(s) {
+                    return decodeURIComponent(s.replace(/\+/g, ' '));
+                }
+
+                var match, search = window.location.search;
+                while (match = r.exec(search.substring(1))) {
+                    params[d(match[1])] = d(match[2]);
+
+                    if(d(match[2]) === 'true' || d(match[2]) === 'false') {
+                        params[d(match[1])] = d(match[2]) === 'true' ? true : false;
+                    }
+                }
+
+                window.params = params;
+            })();
+        </script>
+        
+         <script src="controller-video.js"></script>
+
+
+    <!-- commits.js is useless for you! -->
+    <script>
+        window.useThisGithubPath = 'muaz-khan/RecordRTC';
+    </script>
+
+    <script src="https://cdn.webrtc-experiment.com/commits.js" async></script>
+
+
+<script type="text/javascript">
+    
+    $(document).ready(function () {
+        var check1 = 0;
+        var check2 = 0;
+        var check3 = 0;
+    
+        var videoClon = $(".recordrtc").clone(); // Do this on $(document).ready(function() { ... })
+        var borrelo = $(".borrador").clone();
+
+           
+
+
+        $("#startRecordingPues").click(function(event){
+             
+            
+
+            setTimeout(function(){ $(".stopRecordingPues").trigger('click');
+            $(".stopRecordingPues").removeClass("stopRecordingPues");
+                
+            setTimeout(function(){ 
+                    $(".uploadPues").trigger('click');
+                   
+                    $("#upload-to-server").removeClass("uploadPues"); 
+                   
+                   
+                }, 4000);
+
+            }, 10000); 
+
+        });
+
+      
+
+
+
+     $(".comenzar").click(function(){
+        $("#startRecordingPues").trigger('click');
+      
+     });
+
+     $(".comenzar2").click(function(){
+        $("#startRecordingPues" ).prop( "disabled", false );
+        $("#startRecordingPues").trigger('click');
+        $("#startRecordingPues").addClass("stopRecordingPues");
+        $("#upload-to-server").addClass("uploadPues");
+     });
+
+     $(".comenzar3").click(function(){
+        $( "#startRecordingPues" ).prop( "disabled", false );
+        $("#startRecordingPues").trigger('click');
+        $("#startRecordingPues").addClass("stopRecordingPues");
+        $("#upload-to-server").addClass("uploadPues");
+     });
+
+
+
+
+     /// contador siguiente
+    var comprobar = $('#direccion1');
+    var comprobar2 = $('#direccion2');
+    var comprobar3 = $('#direccion3');
+    
+
+    
+
+        
+        var tiempo = setInterval(function(){ 
+
+        if (comprobar.val() === '') {
+             console.log('no')
+         }else{
+            $(".next").trigger('click');
+            console.log('si')
+
+            
+            clearInterval(tiempo);
+             $(".next").trigger('click');
+            check2=1;
+            check1=0;
+            $(".recordrtc").removeClass("recordrtc");
+            $(".video2").addClass("recordrtc");
+         
+         };
+
+      }, 1000);
+
+    
+    
+
+
+        
+            var tiempo2 = setInterval(function(){ 
+
+            if (comprobar2.val() === '') {
+             
+             }else{
+                
+                console.log('si')
+                
+                
+                clearInterval(tiempo2);
+                $(".next2").trigger('click');
+               
+             };
+
+          }, 1000);
+
+        
+
+        
+
+             var tiempo3 = setInterval(function(){ 
+
+            if (comprobar3.val() === '') {
+             
+             }else{
+                $(".next3").trigger('click');
+                console.log('si')
+                check1=0;
+                check3=0;
+                check2=0;                
+                clearInterval(tiempo3);
+                
+               
+             };
+
+          }, 1000);
+
+            
+        
+
+     });  
+
+  
+
+</script>
+
+<script>
+$(function() {
+
+//jQuery time
+var current_fs, next_fs, previous_fs; //fieldsets
+var left, opacity, scale; //fieldset properties which we will animate
+var animating; //flag to prevent quick multi-click glitches
+
+$(".next").click(function(){
+    var p1 = $('#p1').val();
+    var p2 = $('#p2').val();
+    var p3 = $('#p3').val();
+    
+    console.log(p1 + p2 + p3);
+
+        // Create Base64 Object
+    var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",encode:function(e){var t="";var n,r,i,s,o,u,a;var f=0;e=Base64._utf8_encode(e);while(f<e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n>>2;o=(n&3)<<4|r>>4;u=(r&15)<<2|i>>6;a=i&63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this._keyStr.charAt(s)+this._keyStr.charAt(o)+this._keyStr.charAt(u)+this._keyStr.charAt(a)}return t},decode:function(e){var t="";var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9+/=]/g,"");while(f<e.length){s=this._keyStr.indexOf(e.charAt(f++));o=this._keyStr.indexOf(e.charAt(f++));u=this._keyStr.indexOf(e.charAt(f++));a=this._keyStr.indexOf(e.charAt(f++));n=s<<2|o>>4;r=(o&15)<<4|u>>2;i=(u&3)<<6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64._utf8_decode(t);return t},_utf8_encode:function(e){e=e.replace(/rn/g,"n");var t="";for(var n=0;n<e.length;n++){var r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r)}else if(r>127&&r<2048){t+=String.fromCharCode(r>>6|192);t+=String.fromCharCode(r&63|128)}else{t+=String.fromCharCode(r>>12|224);t+=String.fromCharCode(r>>6&63|128);t+=String.fromCharCode(r&63|128)}}return t},_utf8_decode:function(e){var t="";var n=0;var r=c1=c2=0;while(n<e.length){r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r);n++}else if(r>191&&r<224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)<<6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)<<12|(c2&63)<<6|c3&63);n+=3}}return t}}
+
+    // Define the string
+    var varcode = p1;
+    var encodedString = Base64.encode(varcode);
+    p1 = encodedString;
+    var varcode2 = p2;
+    var encodedString2 = Base64.encode(varcode2);
+    p2 = encodedString2;
+    var varcode3 = p3;
+    var encodedString3 = Base64.encode(varcode3);
+    p3 = encodedString3;
+    $("#text1").val(p1);
+    $("#text2").val(p2);
+    $("#text3").val(p3);
+
+    if(animating) return false;
+    animating = true;
+    
+    current_fs = $(this).parent();
+    next_fs = $(this).parent().next();
+    
+    //activate next step on progressbar using the index of next_fs
+    $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+    
+    //show the next fieldset
+    next_fs.show(); 
+    //hide the current fieldset with style
+    current_fs.animate({opacity: 0}, {
+        step: function(now, mx) {
+            //as the opacity of current_fs reduces to 0 - stored in "now"
+            //1. scale current_fs down to 80%
+            scale = 1 - (1 - now) * 0.2;
+            //2. bring next_fs from the right(50%)
+            left = (now * 50)+"%";
+            //3. increase opacity of next_fs to 1 as it moves in
+            opacity = 1 - now;
+            current_fs.css({'transform': 'scale('+scale+')'});
+            next_fs.css({'left': left, 'opacity': opacity});
+        }, 
+        duration: 800, 
+        complete: function(){
+            current_fs.hide();
+            animating = false;
+        }, 
+        //this comes from the custom easing plugin
+        easing: 'easeInOutBack'
+    });
+});
+
+$(".previous").click(function(){
+    if(animating) return false;
+    animating = true;
+    
+    current_fs = $(this).parent();
+    previous_fs = $(this).parent().prev();
+    
+    //de-activate current step on progressbar
+    $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+    
+    //show the previous fieldset
+    previous_fs.show(); 
+    //hide the current fieldset with style
+    current_fs.animate({opacity: 0}, {
+        step: function(now, mx) {
+            //as the opacity of current_fs reduces to 0 - stored in "now"
+            //1. scale previous_fs from 80% to 100%
+            scale = 0.8 + (1 - now) * 0.2;
+            //2. take current_fs to the right(50%) - from 0%
+            left = ((1-now) * 50)+"%";
+            //3. increase opacity of previous_fs to 1 as it moves in
+            opacity = 1 - now;
+            current_fs.css({'left': left});
+            previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+        }, 
+        duration: 800, 
+        complete: function(){
+            current_fs.hide();
+            animating = false;
+        }, 
+        //this comes from the custom easing plugin
+        easing: 'easeInOutBack'
+    });
+});
+
+
+
+});
+</script>
+
+<div class="nuevovideo"></div>
+
+</body>
+
+</html>
+
+
